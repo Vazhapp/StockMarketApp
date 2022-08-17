@@ -8,7 +8,7 @@ ext {
     kotlin_version = "1.6.2"
     glide_version = "4.13.2"
     rx_java3_version = "3.1.5"
-    room_version = "2.4.2"
+    room_version = "2.4.3"
     retrofit2_version = "2.9.0"
 }
 task clean(type: Delete) {
