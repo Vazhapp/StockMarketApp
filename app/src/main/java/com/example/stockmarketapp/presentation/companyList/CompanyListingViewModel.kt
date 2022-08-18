@@ -32,7 +32,7 @@ class CompanyListingViewModel @Inject constructor(
         }
     }
 
-    private fun getCompanyListing() {
+    fun getCompanyListing() {
         getStockListUseCase.execute().subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread()).subscribe {
             _companiesMutableLiveData.postValue(it)
