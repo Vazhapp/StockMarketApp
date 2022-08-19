@@ -4,11 +4,12 @@ import com.example.stockmarketapp.domain.models.CompanyListing
 import com.opencsv.CSVReader
 import java.io.InputStream
 import java.io.InputStreamReader
+import javax.inject.Inject
 
 /**
  * Created by Vazhapp on 17.08.2022
  */
-class CompanyListingParser : CSVParser<CompanyListing> {
+class CompanyListingParser @Inject constructor(): CSVParser<CompanyListing> {
 
     override fun parse(stream: InputStream): List<CompanyListing> {
         val csvReader = CSVReader(InputStreamReader(stream))
